@@ -10,3 +10,27 @@ média do consumo em km/L e o lucro (líquido) do dia.
 
 VALOR_COMBUSTIVEL = 6.15
 
+km_init = float(input("Informe a marcação do andometro no inicio do dia: "))
+
+km_fin = float(input("Informe a marcação do andometro no final do dia: "))
+
+litros = int(input('informe a quantidade gasta de litros: '))
+
+value_pass = float(input("Informe o valor total recebido pelos passageiros: "))
+
+
+km_r = km_fin - km_init
+
+km_l = km_r/litros
+
+gasto = litros * VALOR_COMBUSTIVEL
+
+lucro = value_pass - gasto
+
+
+print(f'A média de km/l foi de {km_l:.2f} e o lucro foi de {lucro:.2f}')
+
+
+
+
+
