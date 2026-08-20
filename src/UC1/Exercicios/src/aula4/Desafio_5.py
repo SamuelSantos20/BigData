@@ -14,48 +14,50 @@ Observação: nota optativa - o estudante decide fazer uma prova extra para melh
 resultado final.
 '''
 
+import os
 notas = []
 
-def avalia(nota_1: float, nota_2: float):
+def avalia(nota_1: float, nota_2: float) -> str:
 
     media = (nota_1 + nota_2) / 2
     if media >= 6.0:
-        print('Aprovado')
+        return 'Aprovado'
     elif 3.0 <= media < 6.0:
-        print('Recuperação')
+        return 'Recuperação'
     else:
-        print('Reprovado')
-
+        return 'Reprovado'
 
 while True:
     for i in range(2):
         i += 1
         nota = float(input(f'Informe a {i}° nota: '))
         notas.append(nota)
-
     opc = input('O aluno realizou a avaliação optativa? [S/N] ')
-    if opc.upper() == 'N':
+    nota_1 = notas[0]
+    nota_2 = notas[1]
 
-        nota_1 = notas[0]
-        nota_2 = notas[1]
+    if opc.upper() == 'S':
+        nota_op = float(input('Informe a nota do aluno na avaliação optativa: '))
+        nota_min = min(notas)
+        if nota_op > nota_min:
+            notas.remove(nota_min)
+            notas.append(nota_op)
+            print('Resultado: '+ avalia(nota_1, nota_2))
+        else:
+            print('Nota optativa menor do que as duas primeiras notas do aluno, então foi desconsiderada.')
+            print('Resultado: '+ avalia(nota_1, nota_2))
 
-        avalia(nota_1, nota_2)
+    elif opc.upper() == 'N':
+        print('Resultado: '+ avalia(nota_1, nota_2))
 
     else:
+       print('[Erro Desconhecido!]')
 
-        nota_op = float(input('Informe a nota do aluno na avaliação optativa: '))
 
-        nota_min = min(notas)
 
-        notas.remove(nota_min)
-        notas.append(nota_op)
-
-        n1 = notas[0]
-        n2 = notas[1]
-        avalia(n1, n2)
 
     opc = input('Deseja continuar? [S/N] ')
-
+    os.system('cls')
     if opc.upper() == 'N':
         break
 
