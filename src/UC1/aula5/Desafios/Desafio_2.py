@@ -13,7 +13,7 @@ a coleta dos demais dados (telefone, email etc) para esse candidato.
 
 dados = []
 for i in range(1, 13):
-    try: 
+    try:
         ano_nascimento = int(input('informe o seu ano de nascimento: '))
         idade = 2026 - ano_nascimento
         if idade > 18:
