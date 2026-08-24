@@ -6,6 +6,7 @@ Use o laço for para repetir a lógica de cálculo de média e status
 
 '''
 import src.UC1.aula4.Desafios.Desafio_5 as desafio_5
+
 for x in range(10):
     for i in range(2):
         i += 1
