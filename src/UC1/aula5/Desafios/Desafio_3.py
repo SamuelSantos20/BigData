@@ -16,11 +16,17 @@ restantes.
 usuario_salvo = 'admin'
 senha_salva = '123456'
 
+cont = 0
 for i in range(3):
+    cont += 1
     usuario = (input('Digite o seu usuario: '))
     senha = (input('Digite sua senha: '))
 
     if usuario == usuario_salvo and senha == senha_salva:
+        print('Usuario e senha corretos!')
         break
     else:
         print('Usuario ou senha incorretos.')
+if cont > 3:
+    print('Numeros de tentativas excedidas!')
+    print('Sua conta está temporariamente bloqueada!')
