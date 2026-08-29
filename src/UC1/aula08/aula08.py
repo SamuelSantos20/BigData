@@ -15,7 +15,13 @@ def calculadora(num1:int, num2:int, opc:int) -> str | None:
 
 while True:
     opc = int(
-        input('-----------------------------\nInforme a opção desejada:\n (1) -adição\n (2) -subtração \n (3) - multiplicação \n (4) - divisão\n (5) - Sair do programa.\n-------------------------------------\n'))
+        input('-----------------------------\n'+'Informe a opção desejada:'+
+              '\n (1) -adição\n '+
+              '(2) -subtração \n '+
+              '(3) - multiplicação \n '+
+              '(4) - divisão\n'+
+              ' (5) - Sair do programa.'+
+              '\n-------------------------------------\n'))
 
     if opc == 5:
         break

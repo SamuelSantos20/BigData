@@ -15,7 +15,6 @@ o usuário digitar 0. Ao final, mostre o total de multa acumulado no dia.
 
 
 def calcular_multa(peso_total:float) -> float | str:
-
     if peso_total > 100 :
         multa = (peso_total - 100) * 4
         return f"A multa total é de = {multa}\n"
@@ -24,21 +23,21 @@ def calcular_multa(peso_total:float) -> float | str:
 
 
 
+def chat():
+    while True:
 
-while True:
+        quantidade_kg = float(input('Informe a quantidade em kg de pescares: \n'))
 
-    quantidade_kg = float(input('Informe a quantidade em kg de pescares: \n'))
+        print(calcular_multa(quantidade_kg))
 
-    print(calcular_multa(quantidade_kg))
-
-    opc = int(input('Pressione 0 para sair ou 1 para continuar e clique em <enter>:\n'))
+        opc = int(input('Pressione 0 para sair ou 1 para continuar e clique em <enter>:\n'))
 
 
-    if opc == 0:
-        break
-    elif opc != 1:
-        while opc != 1:
-            print('Opção invalida!!')
-            opc = int(input('Pressione 1 para continuar ou 0 para sair.\n'))
+        if opc == 0:
+            break
+        elif opc != 1:
+            while opc != 1:
+                print('Opção invalida!!')
+                opc = int(input('Pressione 1 para continuar ou 0 para sair.\n'))
 
 

@@ -5,7 +5,7 @@ Use o laço for para repetir a lógica de cálculo de média e status
 (Aprovado/Reprovado/Recuperação) que você fez na Aula 4, agora para 10 estudantes.
 
 '''
-import src.UC1.aula4.Desafios.Desafio_5 as desafio_5
+import src.UC1.aula04.Desafios.Desafio_5 as desafio_5
 
 for x in range(10):
     for i in range(2):
