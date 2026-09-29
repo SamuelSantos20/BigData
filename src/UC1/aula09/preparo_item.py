@@ -1,7 +1,4 @@
 
-
-
-
 def  atualizar_preparo_item(nome:str,quantidade: int = 1,prato:bool = False) -> dict:
     """Atualiza o preparo de um item"""
     try:
